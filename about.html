@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prince Portfolio</title>
+<title>About Me | Prince Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -14,8 +14,8 @@
   <div class="site-header__inner">
     <a href="index.html" class="site-title">Prince Darwin<span>.</span></a>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Me</a>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Me</a>
       <a href="favorites.html">My Favorites</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact Me</a>
@@ -24,30 +24,76 @@
 </header>
 
 <main>
-  <div class="banner">
-    <img src="https://picsum.photos/seed/pdh-banner/1200/500" alt="Banner image for Prince Darwin's personal portfolio">
-    <div class="banner__overlay">
-      <h1>Welcome to My Personal Portfolio!</h1>
-      <p>Prince Darwin A. Hurano &middot; Grade 12, TVL-ICT Strand</p>
-    </div>
-  </div>
+  <h1 class="page-title">About Me</h1>
+  <div class="about-grid">
 
-  <div class="card">
-    <h2>Hello, I'm Prince Darwin A. Hurano</h2>
-    <p>
-      I am a Grade 12 student under the <strong>TVL-ICT Strand</strong>. This website
-      contains information about me, my interests, and my skills. Feel free to look
-      around &mdash; you can learn more about me on the <a href="about.html">About Me</a>
-      page, check out my favorite things on the <a href="favorites.html">My Favorites</a>
-      page, browse some photos in the <a href="gallery.html">Gallery</a>, or reach out
-      to me through the <a href="contact.html">Contact Me</a> page.
-    </p>
-    <div class="chip-row">
-      <span class="chip chip--violet">TVL-ICT Student</span>
-      <span class="chip chip--coral">Grade 12</span>
-      <span class="chip chip--teal">Aspiring Computer Engineer</span>
-      <span class="chip chip--gold">Team Player</span>
-    </div>
+    <section class="card">
+      <h2>Personal Introduction</h2>
+      <p>
+        Hi, I'm Prince Darwin A. Hurano, a Grade 12 student taking up the TVL-ICT
+        Strand. I enjoy working with computers and learning how technology can be
+        used to solve everyday problems. This page shares a bit more about my
+        background, interests, and where I hope to go after senior high school.
+      </p>
+
+      <h2>Short Biography</h2>
+      <p>
+        I was born and raised in the Philippines, where I have always been curious
+        about how things work. Growing up, I enjoyed tinkering with gadgets and
+        exploring computers, which eventually led me to choose the ICT/TVL Strand
+        in senior high school. Through this strand, I have learned the basics of
+        computer systems, programming, and web development. Outside of academics,
+        I like spending time on hobbies that help me relax and recharge. I believe
+        in continuous learning and try to pick up a new skill whenever I get the
+        chance. My goal is to keep improving both my technical and personal skills
+        so I can contribute meaningfully to my future workplace and community.
+      </p>
+
+      <h2>Educational Background</h2>
+      <table class="edu-table">
+        <thead>
+          <tr><th>Level</th><th>School Name</th><th>Year</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Elementary</td><td>Fr. William F. Masterson S.J. Elementary School</td><td>2014–2020</td></tr>
+          <tr><td>Junior High School</td><td>Saint Mary's Academy of Carmen, Inc.</td><td>2021–2025</td></tr>
+          <tr><td>Senior High School</td><td>Lourdes College, Inc.</td><td>2025–2027</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Playing video games</li>
+        <li>Playing basketball</li>
+        <li>Listening to music</li>
+        <li>Cooking</li>
+        <li>Gym with friends</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <div class="two-col-list">
+        <ul>
+          <li>Basic HTML &amp; CSS</li>
+          <li>Microsoft Office (Word, PowerPoint)</li>
+          <li>Basic troubleshooting &amp; computer repair</li>
+        </ul>
+        <ul>
+          <li>Time Management</li>
+          <li>Good communication skills</li>
+        </ul>
+      </div>
+
+      <h2>Career Goals</h2>
+      <p>
+        After senior high school, I plan to pursue the course Bachelor of Science in
+        Computer Engineering. My long-term goal is to work as a Computer Engineer
+        &mdash; whether as a web developer, or hardware technician &mdash; and
+        eventually use my skills to help my family and community through technology.
+      </p>
+    </section>
+
   </div>
 </main>
 
