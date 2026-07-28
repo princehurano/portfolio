@@ -33,6 +33,20 @@ body {
   body { animation: none; }
 }
 
+/* ===== Side banners ===== */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1in;
+  background: #0456c9;
+  z-index: 30;
+}
+body::before { left: 0; }
+body::after { right: 0; }
+
 h1, h2, h3 {
   font-family: var(--font-display);
   margin-top: 0;
