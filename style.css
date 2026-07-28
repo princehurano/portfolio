@@ -8,8 +8,8 @@
   --teal: #00B8A9;
   --line: rgba(30, 35, 51, 0.14);
   --paper: #FFFFFF;
-  --font-display: "Poppins", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: "Verdana", "Tahoma", sans-serif;
   --container: 1000px;
 }
 
@@ -40,8 +40,8 @@ body::after {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 18px;
-  background: #0456c9;
+  width: 1in;
+  background: #002250;
   z-index: 30;
 }
 body::before { left: 0; }
