@@ -18,6 +18,7 @@
 body {
   font-family: var(--font-body);
   margin: 0;
+  padding: 0 1in;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
@@ -40,7 +41,7 @@ body::after {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 18px;
+  width: 1in;
   background: #002250;
   z-index: 30;
 }
@@ -128,11 +129,26 @@ main {
 }
 
 .card {
+  position: relative;
   background: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 10px;
   padding: 24px;
-  box-shadow: 5px 5px 0 var(--line);
+  animation: flameFlicker 1.3s ease-in-out infinite alternate;
+}
+
+/* Blue flame glow that traces just the outline of every card, not the inside */
+@keyframes flameFlicker {
+  0%   { box-shadow: 5px 5px 0 var(--line), 0 0 10px 2px rgba(30, 144, 255, 0.5); }
+  50%  { box-shadow: 5px 5px 0 var(--line), 0 0 18px 6px rgba(30, 144, 255, 0.85); }
+  100% { box-shadow: 5px 5px 0 var(--line), 0 0 12px 3px rgba(30, 144, 255, 0.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    box-shadow: 5px 5px 0 var(--line), 0 0 12px 3px rgba(30, 144, 255, 0.6);
+  }
 }
 
 /* ===== Home / profile photo ===== */
