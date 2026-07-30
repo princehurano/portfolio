@@ -269,6 +269,14 @@ figure.gallery-item {
   border-radius: 10px;
   overflow: hidden;
   background: var(--paper);
+  animation: flameFlicker 1.3s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  figure.gallery-item {
+    animation: none;
+    box-shadow: 0 0 12px 3px rgba(30, 144, 255, 0.6);
+  }
 }
 figure.gallery-item img {
   width: 100%;
