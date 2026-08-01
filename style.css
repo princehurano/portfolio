@@ -139,15 +139,15 @@ main {
 
 /* Blue flame glow that traces just the outline of every card, not the inside */
 @keyframes flameFlicker {
-  0%   { box-shadow: 5px 5px 0 var(--line), 0 0 10px 2px rgba(30, 144, 255, 0.5); }
-  50%  { box-shadow: 5px 5px 0 var(--line), 0 0 18px 6px rgba(30, 144, 255, 0.85); }
-  100% { box-shadow: 5px 5px 0 var(--line), 0 0 12px 3px rgba(30, 144, 255, 0.6); }
+  0%   { box-shadow: 5px 5px 0 var(--line), 0 0 14px 4px rgba(30, 144, 255, 0.6); }
+  50%  { box-shadow: 5px 5px 0 var(--line), 0 0 26px 10px rgba(30, 144, 255, 0.9); }
+  100% { box-shadow: 5px 5px 0 var(--line), 0 0 18px 6px rgba(30, 144, 255, 0.7); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .card {
     animation: none;
-    box-shadow: 5px 5px 0 var(--line), 0 0 12px 3px rgba(30, 144, 255, 0.6);
+    box-shadow: 5px 5px 0 var(--line), 0 0 18px 6px rgba(30, 144, 255, 0.7);
   }
 }
 
@@ -159,7 +159,7 @@ main {
   overflow: hidden;
   border: 5px solid var(--ink);
   margin: 20px auto 0;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  animation: flameFlickerPhoto 1.3s ease-in-out infinite alternate;
 }
 .profile-photo img {
   width: 100%;
@@ -167,6 +167,20 @@ main {
   object-fit: cover;
   object-position: center 15%;
 }
+
+@keyframes flameFlickerPhoto {
+  0%   { box-shadow: 0 6px 18px rgba(0,0,0,0.15), 0 0 14px 4px rgba(30, 144, 255, 0.6); }
+  50%  { box-shadow: 0 6px 18px rgba(0,0,0,0.15), 0 0 26px 10px rgba(30, 144, 255, 0.9); }
+  100% { box-shadow: 0 6px 18px rgba(0,0,0,0.15), 0 0 18px 6px rgba(30, 144, 255, 0.7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-photo {
+    animation: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15), 0 0 18px 6px rgba(30, 144, 255, 0.7);
+  }
+}
+
 .hero-title {
   text-align: center;
   margin: 24px 0 4px;
@@ -275,7 +289,7 @@ figure.gallery-item {
 @media (prefers-reduced-motion: reduce) {
   figure.gallery-item {
     animation: none;
-    box-shadow: 0 0 12px 3px rgba(30, 144, 255, 0.6);
+    box-shadow: 0 0 18px 6px rgba(30, 144, 255, 0.7);
   }
 }
 figure.gallery-item img {
