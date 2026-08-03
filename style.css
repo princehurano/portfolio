@@ -1,4 +1,3 @@
-/* ===== Tokens ===== */
 :root {
   --bg: #EAF4FF;
   --ink: #1E2333;
@@ -34,7 +33,6 @@ body {
   body { animation: none; }
 }
 
-/* ===== Side banners ===== */
 body::before,
 body::after {
   content: "";
@@ -63,7 +61,6 @@ img { max-width: 100%; display: block; }
   outline-offset: 2px;
 }
 
-/* ===== Nav ===== */
 .site-header {
   position: sticky;
   top: 0;
@@ -114,7 +111,6 @@ img { max-width: 100%; display: block; }
   color: var(--paper);
 }
 
-/* ===== Layout helpers ===== */
 main {
   max-width: var(--container);
   margin: 0 auto;
@@ -142,7 +138,6 @@ main {
   transform: translateY(-6px);
 }
 
-/* Blue flame glow that traces just the outline of every card, not the inside */
 @keyframes flameFlicker {
   0%   { box-shadow: 5px 5px 0 var(--line), 0 0 14px 4px rgba(30, 144, 255, 0.6); }
   50%  { box-shadow: 5px 5px 0 var(--line), 0 0 26px 10px rgba(30, 144, 255, 0.9); }
@@ -156,7 +151,6 @@ main {
   }
 }
 
-/* ===== Home / profile photo ===== */
 .profile-photo {
   width: 260px;
   height: 260px;
@@ -224,7 +218,6 @@ main {
 .chip--teal { background: var(--teal); color: white; }
 .chip--gold { background: var(--gold); color: var(--ink); }
 
-/* ===== About page ===== */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -255,7 +248,6 @@ table.edu-table th {
   .two-col-list { grid-template-columns: 1fr; }
 }
 
-/* ===== Favorites page ===== */
 .fav-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -275,7 +267,6 @@ table.edu-table th {
 }
 .fav-card li { margin-bottom: 6px; }
 
-/* ===== Gallery ===== */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -323,7 +314,6 @@ figure.gallery-item figcaption {
   border-top: 2px solid var(--ink);
 }
 
-/* ===== Contact / form ===== */
 form.contact-form {
   display: grid;
   gap: 18px;
@@ -367,7 +357,6 @@ form.contact-form {
 .btn--reset { background: var(--paper); color: var(--ink); }
 .btn:hover { transform: translateY(-2px); }
 
-/* ===== Footer ===== */
 .site-footer {
   text-align: center;
   padding: 20px;
