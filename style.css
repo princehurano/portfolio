@@ -18,7 +18,13 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0 30px;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(108, 92, 231, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(0, 184, 169, 0.16), transparent 38%),
+    radial-gradient(circle at 18% 82%, rgba(255, 90, 95, 0.14), transparent 40%),
+    radial-gradient(circle at 85% 88%, rgba(255, 201, 60, 0.16), transparent 42%),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--ink);
   line-height: 1.6;
   animation: pageFadeIn 1s ease;
@@ -49,6 +55,21 @@ body::after { right: 0; }
 h1, h2, h3 {
   font-family: var(--font-display);
   margin-top: 0;
+  background: linear-gradient(90deg, var(--coral), var(--gold), var(--teal), var(--violet), var(--coral));
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--ink);
+  animation: gradientTextShift 6s linear infinite;
+}
+
+@keyframes gradientTextShift {
+  to { background-position: 300% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1, h2, h3 { animation: none; }
 }
 
 a { color: var(--violet); }
@@ -126,12 +147,19 @@ main {
 
 .card {
   position: relative;
-  background: var(--paper);
-  border: 2px solid var(--ink);
   border-radius: 10px;
   padding: 24px;
-  animation: flameFlicker 1.3s ease-in-out infinite alternate;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(var(--paper), var(--paper)) padding-box,
+    linear-gradient(120deg, var(--coral), var(--gold), var(--teal), var(--violet), var(--coral)) border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: flameFlicker 1.3s ease-in-out infinite alternate, gradientBorderShift 5s linear infinite;
   transition: transform 0.2s ease;
+}
+
+@keyframes gradientBorderShift {
+  to { background-position: 0 0, 100% 50%; }
 }
 
 .card:hover {
@@ -156,9 +184,13 @@ main {
   height: 260px;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid var(--ink);
+  border: 5px solid transparent;
+  background:
+    linear-gradient(var(--paper), var(--paper)) padding-box,
+    linear-gradient(120deg, var(--coral), var(--gold), var(--teal), var(--violet), var(--coral)) border-box;
+  background-size: 100% 100%, 300% 300%;
   margin: 20px auto 0;
-  animation: flameFlickerPhoto 1.3s ease-in-out infinite alternate;
+  animation: flameFlickerPhoto 1.3s ease-in-out infinite alternate, gradientBorderShift 5s linear infinite;
   transition: transform 0.2s ease;
 }
 
