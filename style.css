@@ -277,15 +277,19 @@ table.edu-table th {
 
 /* ===== Gallery ===== */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
+figure.gallery-item {
+  flex: 0 1 calc((100% - 40px) / 3);
+}
 @media (max-width: 800px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  figure.gallery-item { flex-basis: calc((100% - 20px) / 2); }
 }
 @media (max-width: 500px) {
-  .gallery { grid-template-columns: 1fr; }
+  figure.gallery-item { flex-basis: 100%; }
 }
 figure.gallery-item {
   margin: 0;
