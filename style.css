@@ -18,7 +18,7 @@
 body {
   font-family: var(--font-body);
   margin: 0;
-  padding: 0 18px;
+  padding: 0 30px;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
@@ -135,6 +135,11 @@ main {
   border-radius: 10px;
   padding: 24px;
   animation: flameFlicker 1.3s ease-in-out infinite alternate;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
 }
 
 /* Blue flame glow that traces just the outline of every card, not the inside */
@@ -160,6 +165,11 @@ main {
   border: 5px solid var(--ink);
   margin: 20px auto 0;
   animation: flameFlickerPhoto 1.3s ease-in-out infinite alternate;
+  transition: transform 0.2s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
 }
 .profile-photo img {
   width: 100%;
@@ -284,6 +294,11 @@ figure.gallery-item {
   overflow: hidden;
   background: var(--paper);
   animation: flameFlicker 1.3s ease-in-out infinite alternate;
+  transition: transform 0.2s ease;
+}
+
+figure.gallery-item:hover {
+  transform: translateY(-6px);
 }
 
 @media (prefers-reduced-motion: reduce) {
